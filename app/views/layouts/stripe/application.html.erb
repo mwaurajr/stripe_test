@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PWA Maker</title>
+    <%= stylesheet_link_tag 'stripe', media: 'all' %>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <%# two js files must me added to application.rb for precompiling %>
+    <% if controller_name == "subscriptions" and action_name == "success" %>
+      <%= javascript_include_tag 'stripe/client.js' %>
+    <% end %>
+
+    <%= javascript_include_tag 'stripe/helpers.js' %>
+  </head>
+
+  <body>
+    <section>
+      <%= yield %>
+    </section>
+  </body>
+</html>

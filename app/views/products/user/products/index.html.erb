@@ -1,0 +1,17 @@
+   <ul>
+        <% @products.each do |product| %>
+          <li> 
+            <%= product.title %> | 
+             <% if product.paid_at.blank? %> 
+              <%= link_to "Pay #{product.price_humanized} to download", new_user_charge_path(charge_id: product.id) %>
+            <% else %>
+              <%= link_to "Download", user_product_path(product) %> |
+              <% if product.was_never_subscribed or product.is_unsubscribed %> 
+                <%= link_to "Subscribe for maintenance", new_user_subscription_path(subscription_id: product.id) %>
+              <% elsif product.is_subscribed %> 
+                <%= link_to "Cancel subscrption for maintenance", user_unsubscriptions_path(subscription_id: product.product_id), method: :post %>
+              <% end %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
