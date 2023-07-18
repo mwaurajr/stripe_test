@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  content: MyText
+  user_id: 1
+  price: 1
+  price_id: MyString
+  product_id: MyString
+  paid_at: 2023-07-18 19:57:16
+  zip_filename: MyString
+  subscription_price_id: MyString
+  subscription_price: 1
+  subscribed_at: 2023-07-18 19:57:16
+  subscription_id: MyString
+  unsubscribed_at: 2023-07-18 19:57:16
+
+two:
+  title: MyString
+  content: MyText
+  user_id: 1
+  price: 1
+  price_id: MyString
+  product_id: MyString
+  paid_at: 2023-07-18 19:57:16
+  zip_filename: MyString
+  subscription_price_id: MyString
+  subscription_price: 1
+  subscribed_at: 2023-07-18 19:57:16
+  subscription_id: MyString
+  unsubscribed_at: 2023-07-18 19:57:16
