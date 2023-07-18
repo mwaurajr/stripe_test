@@ -21,7 +21,7 @@ class Product < ApplicationRecord
     end
   
     def currency
-      "KSH"
+      "USD"
     end
   
     def in_main_currency(price)
